@@ -1,0 +1,11 @@
+---
+- name: Dependent file for Centos6
+  yum: name=libselinux-python state=installed
+
+- name: Add logstash repo
+  template: src=logstash.repo.j2 dest=/etc/yum.repos.d/logstash.repo
+
+- name: Install Logstash.
+  yum: pkg=logstash state=installed
+  notify:
+   - restart logstash
