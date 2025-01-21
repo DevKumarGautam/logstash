@@ -1,0 +1,2 @@
+[remote]
+43.205.139.159 ansible_user=ubuntu ansible_ssh_private_key_file=/home/opstree/sd2-dr-bastion-key.pem
